@@ -1,9 +1,17 @@
 package Seminar.S3;
 
+import java.util.Stack;
+
 public class User implements Comparable<User>{
     private String firstName;
     private String lastName;
     private int age;
+    
+    private static Sorter sort;
+
+    public static void setSorter(Sorter sort) {
+        User.sort = sort;
+    }
 
     
     public User(String firstName, String lastName, int age) {
@@ -21,27 +29,27 @@ public class User implements Comparable<User>{
 
     @Override
     public int compareTo(User o) {
-        int conditionFirstName = firstName.compareTo(o.firstName);
-        if (conditionFirstName != 0){
-            return conditionFirstName;
-        }
-
-        int conditionLastName = lastName.compareTo(o.lastName);
-        if  (conditionLastName != 0){
-            return conditionLastName;
-        }
-
-        return this.age - o.age;
+        return sort.compare(this, o);
     }
 
-    // @Override
-    // public int compareTo(User o) {
-    //     if (firstName.compareTo(o.firstName) != 0){
-    //         return firstName.compareTo(o.firstName);
-    //     }
-    //     if (lastName.compareTo(o.lastName) != 0){
-    //         return lastName.compareTo(o.lastName);
-    //     }
-    //     return this.age - o.age;
-    // }
+    public static abstract class Sorter {
+        public abstract int compare(User u1, User u2);
+    }
+
+    public static class SorterFirstName extends Sorter {
+
+        @Override
+        public int compare(User u1, User u2) {
+            return u1.firstName.compareTo(u2.firstName);
+        }
+    }
+
+    public static class SorterLastName extends Sorter {
+
+        @Override
+        public int compare(User u1, User u2) {
+            return u1.lastName.compareTo(u2.lastName);
+        }
+
+    }
 }
