@@ -6,7 +6,6 @@ public class User implements Comparable<User>{
     private String firstName;
     private String lastName;
     private int age;
-    
     private static Sorter sort;
 
     public static void setSorter(Sorter sort) {
