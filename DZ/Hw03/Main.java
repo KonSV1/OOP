@@ -14,16 +14,16 @@ public class Main {
         
         test.print();
         System.out.println("Длина списка " + test.size() + " элементов");
-        test.remove(5);
-        test.print();
-        System.out.println("Длина списка " + test.size() + " элементов");
-        test.add(0);
-        test.print();
-        System.out.println("Длина списка " + test.size() + " элементов");
+        // test.remove(5);
+        // test.print();
+        // System.out.println("Длина списка " + test.size() + " элементов");
+        // test.add(0);
+        // test.print();
+        // System.out.println("Длина списка " + test.size() + " элементов");
 
 
-        for (var data : test) {
-            System.out.println(data);
+        for (var element : test) {
+            System.out.println(element);
         }
     }
 }

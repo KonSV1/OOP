@@ -13,17 +13,12 @@ public class LinkedList implements Iterable{
     }
 
     public class  Node{
-        public  int data;
-        public  Node next;
+        public int data;
+        public Node next;
 
         public Node(int data){
             this.data = data;
             next = null;
-        }
-
-        @Override
-        public String toString() {
-            return String.toString(this.data);
         }
     }
 
@@ -48,6 +43,10 @@ public class LinkedList implements Iterable{
         }
     }
     
+    /**
+     * Удаление по значению
+     * @param data - значение для удаления
+     */
     public void remove(int data){
         Node currentNode = head;
         Node previosNode = null;
@@ -81,7 +80,10 @@ public class LinkedList implements Iterable{
         System.out.println(Ll);
     }
 
-
+    @Override
+    public String toString() {
+        return Node.data;
+    }
 
     @Override
     public Iterator<Node> iterator() {
@@ -91,6 +93,7 @@ public class LinkedList implements Iterable{
     protected class Ll implements Iterator<Node>{
         
         Node currentNode = head;
+        private int index =0;
 
         @Override
         public boolean hasNext() {
@@ -99,8 +102,14 @@ public class LinkedList implements Iterable{
 
         @Override
         public Node next() {
+            if (index == 0) {
+                index++;
+                return currentNode;
+            }
+            else {
             currentNode = currentNode.next;
             return currentNode;
+            }
         }
     }
 }
