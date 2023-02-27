@@ -23,7 +23,7 @@ public class LinkedList implements Iterable{
 
         @Override
         public String toString() {
-            return String.format(this.data);
+            return String.toString(this.data);
         }
     }
 

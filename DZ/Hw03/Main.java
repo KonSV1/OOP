@@ -11,6 +11,7 @@ public class Main {
         test.add(5);
         test.add(18);
     
+        
         test.print();
         System.out.println("Длина списка " + test.size() + " элементов");
         test.remove(5);
@@ -19,6 +20,7 @@ public class Main {
         test.add(0);
         test.print();
         System.out.println("Длина списка " + test.size() + " элементов");
+
 
         for (var data : test) {
             System.out.println(data);
