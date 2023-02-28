@@ -20,12 +20,16 @@ public class LinkedList implements Iterable{
             this.data = data;
             next = null;
         }
+           
+        @Override
+        public String toString() {
+            return Integer.toString(data);
+        }
     }
 
     public int size(){
         return count;
         }
-
 
     public void add(int data){
         Node newNode = new Node(data);
@@ -78,11 +82,6 @@ public class LinkedList implements Iterable{
             Ll.append(" ");
         }
         System.out.println(Ll);
-    }
-
-    @Override
-    public String toString() {
-        return Node.data;
     }
 
     @Override

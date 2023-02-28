@@ -14,13 +14,13 @@ public class Main {
         
         test.print();
         System.out.println("Длина списка " + test.size() + " элементов");
-        // test.remove(5);
-        // test.print();
-        // System.out.println("Длина списка " + test.size() + " элементов");
-        // test.add(0);
-        // test.print();
-        // System.out.println("Длина списка " + test.size() + " элементов");
-
+        test.remove(5);
+        test.print();
+        System.out.println("Длина списка " + test.size() + " элементов");
+        test.add(90);
+        test.print();
+        System.out.println("Длина списка " + test.size() + " элементов");
+        System.out.println("____________________________");
 
         for (var element : test) {
             System.out.println(element);
