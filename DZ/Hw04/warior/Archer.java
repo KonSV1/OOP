@@ -19,6 +19,6 @@ public class Archer extends Warrior<Bow, Light> implements DistanceAttacker {
 
     @Override
     public String toString() {
-        return super.toString() + " defense  = " + getDefense() + " attack distance =" + distance;
+        return super.toString() + " defense  = " + getDefense() + ", attack distance =" + distance;
     }
 }

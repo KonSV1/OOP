@@ -59,6 +59,6 @@ public class Team<T extends Warrior> {
         for (T item : team) {
             teamBuilder.append(item.toString() + "\n");
         }
-        return String.format("Team{ team= %s, maxDistance = %d, maxDamage = %d, minDefense = %s \n%s}", name, getMaxDistance(), getTeamAttack(), getMinDefense(), teamBuilder);
+        return String.format("Team = %s, maxDistance = %d, maxDamage = %d, minDefense = %s \n%s", name, getMaxDistance(), getTeamAttack(), getMinDefense(), teamBuilder);
     }
 }

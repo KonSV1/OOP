@@ -15,6 +15,6 @@ public class Bow implements Weapon {
 
     @Override
     public String toString() {
-        return "Long Bow { " + "distance =" + distance + " damage = " + attack() + " }";
+        return "Long Bow { " + "distance =" + distance + " attack = " + attack() + " }";
     }
 }

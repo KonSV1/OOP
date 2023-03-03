@@ -29,7 +29,7 @@ public abstract class Warrior<T1 extends Weapon, T2 extends Armor> {
     }
 
     public int hitDamage(Warrior enemy) {
-        int damage = rnd.nextInt(weapon.attack()) - armor.defense();
+        int damage = rnd.nextInt(20, weapon.attack()) - armor.defense();
         enemy.reduceHealthPoint(damage);
         return damage;
     }

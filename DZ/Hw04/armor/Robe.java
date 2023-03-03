@@ -25,8 +25,8 @@ public class Robe  implements  Armor{
         return def;
     }
 
-    @Override
-    public String toString() {
-        return "Защита = " + defense();
-    }
+    // @Override
+    // public String toString() {
+    //     return "Защита = " + defense();
+    // }
 }
