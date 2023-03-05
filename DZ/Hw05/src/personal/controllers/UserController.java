@@ -49,4 +49,12 @@ public class UserController {
         user.setPhone(newUser.getPhone());
         repository.saveUsers(users);
     }
+    public void deleteUser (String userID) throws Exception {
+        List<User> users = repository.getAllUsers();
+        User user = userSerch(userID, users);
+        user.setFirstName(null);
+        user.setLastName(null);
+        user.setPhone(null);
+        repository.saveUsers(users);
+    }
 }
