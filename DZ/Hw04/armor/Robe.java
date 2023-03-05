@@ -18,7 +18,6 @@ public class Robe  implements  Armor{
     }
 
 
-
     @Override
     public int defense() {
         int def = circlet+tunic+stocking+cloves+shoes+sigil;

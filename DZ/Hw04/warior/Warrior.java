@@ -3,6 +3,7 @@ package DZ.Hw04.warior;
 import java.util.Random;
 
 import DZ.Hw04.armor.Armor;
+import DZ.Hw04.armor.Robe;
 import DZ.Hw04.weapons.Weapon;
 
 public abstract class Warrior<T1 extends Weapon, T2 extends Armor> {

@@ -1,4 +1,4 @@
-package Seminar.S3;
+
 
 import java.util.Collection;
 import java.util.Collections;

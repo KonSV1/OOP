@@ -37,6 +37,9 @@ public class ViewUser {
                     case UPDATE:
                         updateUser();
                         break;
+                    case DELETE:
+                        delUser();
+                        break;
                 }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
@@ -45,19 +48,27 @@ public class ViewUser {
     }
 
     private void updateUser() throws Exception {
-        String readID = prompt("Для редактирования пользователя введите его идентификатор: ");
+        String readID = prompt("Для редактирования контакта введите его идентификатор: ");
         userController.updateUser(readID, inputUser());
+    }
+
+    private void delUser() throws Exception {
+        String readID = prompt("Для удаления контакта введите его идентификатор: ");
+        userController.deleteUser(readID);
     }
 
     private void listUsers() {
         List<User> listUsers = userController.readAllUsers();
         for (User user: listUsers) {
-            System.out.println(user+"\n");
+            if(listUsers.contains("")) {
+                System.out.println(user+"\n");
+            }
         }
     }
 
+
     private void readUser() throws Exception {
-        String id = prompt("Идентификатор пользователя: ");
+        String id = prompt("Идентификатор контакта: ");
         User user = userController.readUser(id);
         System.out.println(user);
     }

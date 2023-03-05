@@ -24,7 +24,6 @@ public class UserController {
         List<User> users = repository.getAllUsers();
         User user = userSerch(userId, users);
         return user;
-
     }
 
     private static User userSerch(String userId, List<User> users) throws Exception {
@@ -48,7 +47,14 @@ public class UserController {
         user.setLastName(newUser.getLastName());
         user.setPhone(newUser.getPhone());
         repository.saveUsers(users);
+    }
 
-
+    public void deleteUser (String userID) throws Exception {
+        List<User> users = repository.getAllUsers();
+        User user = userSerch(userID, users);
+        user.setFirstName("");
+        user.setLastName("");
+        user.setPhone("");
+        repository.saveUsers(users);
     }
 }

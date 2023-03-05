@@ -1,4 +1,4 @@
-package Seminar.S3;
+
 
 import java.util.Stack;
 
@@ -50,5 +50,9 @@ public class User implements Comparable<User>{
             return u1.lastName.compareTo(u2.lastName);
         }
 
+    }
+
+    public User[] getPersonal() {
+        return null;
     }
 }

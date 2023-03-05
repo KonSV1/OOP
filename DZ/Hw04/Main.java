@@ -2,6 +2,7 @@ package DZ.Hw04;
 
 import DZ.Hw04.armor.Heavy;
 import DZ.Hw04.armor.Light;
+import DZ.Hw04.armor.Robe;
 import DZ.Hw04.team.Team;
 import DZ.Hw04.warior.Archer;
 import DZ.Hw04.warior.Mag;
@@ -13,6 +14,7 @@ import DZ.Hw04.weapons.Sword;
 
 
 import static DZ.Hw04.armor.Armor.*;
+import static DZ.Hw04.armor.Robe.*;
 
 public class Main {
     public static void main(String[] args) {
