@@ -19,7 +19,7 @@ public class Validation {
             throw new Exception("Фамилия содержит пробелы");
         }
         if(!matcherPhone.find()){
-            throw new Exception("Номер телефона содержит нецифровые символы");
+            throw new Exception("Номер телефона введен неверно");
         }
 
     }

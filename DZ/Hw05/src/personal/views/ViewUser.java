@@ -3,6 +3,7 @@ package personal.views;
 import personal.controllers.UserController;
 import personal.model.User;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -36,9 +37,6 @@ public class ViewUser {
                     case UPDATE:
                         updateUser();
                         break;
-                    case DELETE:
-                        delUser();
-                        break;
                 }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
@@ -47,13 +45,8 @@ public class ViewUser {
     }
 
     private void updateUser() throws Exception {
-        String readID = prompt("Для редактирования контакта введите его идентификатор: ");
+        String readID = prompt("Для редактирования пользователя введите его идентификатор: ");
         userController.updateUser(readID, inputUser());
-    }
-
-    private void delUser() throws Exception {
-        String readID = prompt("Для удаления контакта введите его идентификатор: ");
-        userController.deleteUser(readID);
     }
 
     private void listUsers() {
@@ -63,9 +56,8 @@ public class ViewUser {
         }
     }
 
-
     private void readUser() throws Exception {
-        String id = prompt("Идентификатор контакта: ");
+        String id = prompt("Идентификатор пользователя: ");
         User user = userController.readUser(id);
         System.out.println(user);
     }
