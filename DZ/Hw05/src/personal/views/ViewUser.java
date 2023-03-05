@@ -3,7 +3,6 @@ package personal.views;
 import personal.controllers.UserController;
 import personal.model.User;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -60,9 +59,7 @@ public class ViewUser {
     private void listUsers() {
         List<User> listUsers = userController.readAllUsers();
         for (User user: listUsers) {
-            if(listUsers.contains("")) {
-                System.out.println(user+"\n");
-            }
+            System.out.println(user+"\n");
         }
     }
 
