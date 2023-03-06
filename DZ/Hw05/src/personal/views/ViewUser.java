@@ -61,8 +61,11 @@ public class ViewUser {
     private void listUsers() {
         List<User> listUsers = userController.readAllUsers();
         for (User user: listUsers) {
-            System.out.println(user+"\n");
+            if(!user.getLastName().equals("null")) {
+                System.out.println(user+"\n");
+            }
         }
+        System.out.println("__________ end __________\n");
     }
 
     private void readUser() throws Exception {
@@ -96,8 +99,8 @@ public class ViewUser {
         System.out.println("UPDATE - Обновление (изменение данных) контакта. Изменение контакта осуществляется по его идентификатору," +
                 "\nидиентификатор при обновлении контакта остается прежним.");
         System.out.println("DELETE - Удаление контакта. Удаление контакта осуществляется по его идентификатору. " +
-                "\nИдентификатор удаленного контакта остается свободным и отображется в общем списке (команда LIST). " +
-                "\nСвободный идентификатор в дальнейшем может быть использован для нового контакта (команда UPDATE).\n");
+                "\nИдентификатор удаленного контакта остается свободным но в общем списке (команда LIST) не отображается. " +
+                "\nСвободный идентификатор доступен для команд READ и UPDATE).\n");
 
     }
 }

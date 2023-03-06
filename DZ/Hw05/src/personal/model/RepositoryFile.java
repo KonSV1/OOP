@@ -47,6 +47,5 @@ public class RepositoryFile implements Repository {
             lines.add(mapper.map(item));
         }
         fileOperation.saveAllLines(lines);
-        fileOperation.saveAllLinesCSV(lines);
     }
 }
