@@ -1,4 +1,4 @@
-package srp;
+package srp.Model;
 
 public class User{
 	private String name;

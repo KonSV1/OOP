@@ -1,4 +1,8 @@
-package srp;
+package srp.Presenter;
+
+import srp.Model.Persister;
+import srp.Model.User;
+import srp.View.ViewProcess;
 
 public class App {
     String user;
@@ -8,9 +12,9 @@ public class App {
 
     public void start(String name){
         User user = new User(name);
-        View.report(user);
+        ViewProcess.report(user);
         Persister.preservationUser(user);
-        View.save(user);
+        ViewProcess.save(user);
        }
 }
 

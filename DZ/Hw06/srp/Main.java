@@ -1,6 +1,6 @@
 package srp;
 
-import srp.App;
+import srp.Presenter.App;
 
 public class Main{
 	public static void main(String[] args){

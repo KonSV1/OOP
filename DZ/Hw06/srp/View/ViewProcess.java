@@ -1,9 +1,11 @@
-package srp;
+package srp.View;
 
-public class View {
+import srp.Model.User;
+
+public class ViewProcess {
     private final String user;
 
-    public View(String user) {
+    public ViewProcess(String user) {
         this.user = user;
     }
 

@@ -1,4 +1,6 @@
-package srp;
+package srp.Model;
+
+import srp.Model.User;
 
 public class Persister{
 	private final String user;
